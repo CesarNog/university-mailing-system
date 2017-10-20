@@ -20,8 +20,8 @@ Before you can build and run this project locally, you must install and configur
 
 Run the following commands in two separate terminals to create a blissful development experience where your browser auto-refreshes when files change on your hard drive.
 
-    **./mvnw**
-    **yarn start**
+    ./mvnw
+    yarn start
 
 Yarn is also used to manage CSS and JavaScript dependencies used in this application.
 

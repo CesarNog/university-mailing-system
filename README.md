@@ -31,26 +31,6 @@ Add the `help` flag on any command to see how you can use it. For example, `yarn
 
 The `yarn run` command will list all of the scripts available to run for this project.
 
-### Service workers
-
-Service workers are commented by default, to enable them please uncomment the following code.
-
-* The service worker registering script in index.html
-```
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-        .register('./sw.js')
-        .then(function() { console.log('Service Worker Registered'); });
-    }
-</script>
-```
-* The copy file option in webpack-common.js
-```js
-{ from: './src/main/webapp/sw.js', to: 'sw.js' },
-```
-Note: Add the respective scripts/assets in `sw.js` that is needed to be cached.
-
 ### Managing dependencies
 
 For example, to add [Leaflet][] library as a runtime dependency of your application, you would run following command:
@@ -149,24 +129,17 @@ For more information refer to [Using Docker and Docker-Compose][], this page als
 
 To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`), this will let you generate configuration files for a number of Continuous Integration systems. Consult the [Setting up Continuous Integration][] page for more information.
 
-[JHipster Homepage and latest documentation]: http://www.jhipster.tech
-[JHipster 4.10.0 archive]: http://www.jhipster.tech/documentation-archive/v4.10.0
+JHipster Homepage and latest documentation: [http://www.jhipster.tech](http://www.jhipster.tech)
 
-[Using JHipster in development]: http://www.jhipster.tech/documentation-archive/v4.10.0/development/
-[Service Discovery and Configuration with the JHipster-Registry]: http://www.jhipster.tech/documentation-archive/v4.10.0/microservices-architecture/#jhipster-registry
-[Using Docker and Docker-Compose]: http://www.jhipster.tech/documentation-archive/v4.10.0/docker-compose
-[Using JHipster in production]: http://www.jhipster.tech/documentation-archive/v4.10.0/production/
-[Running tests page]: http://www.jhipster.tech/documentation-archive/v4.10.0/running-tests/
-[Setting up Continuous Integration]: http://www.jhipster.tech/documentation-archive/v4.10.0/setting-up-ci/
 
-## References
-[Node.js]: https://nodejs.org/
-[Yarn]: https://yarnpkg.org/
-[Webpack]: https://webpack.github.io/
-[Angular CLI]: https://cli.angular.io/
-[BrowserSync]: http://www.browsersync.io/
-[Karma]: http://karma-runner.github.io/
-[Jasmine]: http://jasmine.github.io/2.0/introduction.html
-[Protractor]: https://angular.github.io/protractor/
-[Leaflet]: http://leafletjs.com/
-[DefinitelyTyped]: http://definitelytyped.org/
+## Main References Used
+	Node.js: [https://nodejs.org/](https://nodejs.org/)
+	Yarn: [https://yarnpkg.org/](https://yarnpkg.org/)
+	Webpack: [https://webpack.github.io/](https://webpack.github.io/)
+	Angular CLI: [https://cli.angular.io/](https://cli.angular.io/)
+	BrowserSync: [http://www.browsersync.io/](http://www.browsersync.io/)
+	Karma: [http://karma-runner.github.io/](http://karma-runner.github.io/)
+	Jasmine: [http://jasmine.github.io/2.0/introduction.html](http://jasmine.github.io/2.0/introduction.html)
+	Protractor: [https://angular.github.io/protractor/](https://angular.github.io/protractor/)
+	Leaflet: [http://leafletjs.com/](http://leafletjs.com/)
+	DefinitelyTyped: [http://definitelytyped.org/](http://definitelytyped.org/)

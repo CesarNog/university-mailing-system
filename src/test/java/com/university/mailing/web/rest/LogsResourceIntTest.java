@@ -1,6 +1,7 @@
 package com.university.mailing.web.rest;
 
 import com.university.mailing.UniversityMailingApp;
+import com.university.mailing.UniversityMailingApp;
 import com.university.mailing.web.rest.vm.LoggerVM;
 import ch.qos.logback.classic.AsyncAppender;
 import ch.qos.logback.classic.LoggerContext;

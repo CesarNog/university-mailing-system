@@ -65,8 +65,7 @@ public class StudentResource {
         student = studentRepository.save(student);
         StudentDTO result = studentMapper.toDto(student);
         return ResponseEntity.created(new URI("/api/students/" + result.getId()))
-            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId()
-                .toString()))
+            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
             .body(result);
     }
 
@@ -90,8 +89,7 @@ public class StudentResource {
         student = studentRepository.save(student);
         StudentDTO result = studentMapper.toDto(student);
         return ResponseEntity.ok()
-            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, studentDTO.getId()
-                .toString()))
+            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, studentDTO.getId().toString()))
             .body(result);
     }
 
@@ -136,8 +134,6 @@ public class StudentResource {
     public ResponseEntity<Void> deleteStudent(@PathVariable Long id) {
         log.debug("REST request to delete Student : {}", id);
         studentRepository.delete(id);
-        return ResponseEntity.ok()
-            .headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString()))
-            .build();
+        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();
     }
 }

@@ -1,6 +1,6 @@
 package com.university.mailing.service;
 import com.university.mailing.config.Constants;
-
+import com.university.mailing.UniversityMailingApp;
 import com.university.mailing.UniversityMailingApp;
 import com.university.mailing.domain.User;
 import io.github.jhipster.config.JHipsterProperties;

@@ -9,7 +9,7 @@ ADD . /code/
 RUN echo '{ "allow_root": true }' > /root/.bowerrc 
 
 RUN sh -c  'cd /code/ && ./mvnw clean package -Pprod -DskipTests && mv /code/target/*.war /app.war && rm -Rf /code /root/.npm/ /tmp && rm -Rf /root/.m2/'
-
+RUN ["chmod", "+x", "/node/execure.sh”]
 RUN sh -c 'touch /app.war'
 VOLUME /tmp
 EXPOSE 8080 5701/udp

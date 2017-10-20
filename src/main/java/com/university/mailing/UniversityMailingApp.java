@@ -12,7 +12,6 @@ import org.springframework.boot.actuate.autoconfigure.*;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
@@ -25,7 +24,6 @@ import java.util.Collection;
 @ComponentScan
 @EnableAutoConfiguration(exclude = {MetricFilterAutoConfiguration.class, MetricRepositoryAutoConfiguration.class})
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
-@EnableDiscoveryClient
 public class UniversityMailingApp {
 
     private static final Logger log = LoggerFactory.getLogger(UniversityMailingApp.class);
@@ -37,7 +35,7 @@ public class UniversityMailingApp {
     }
 
     /**
-     * Initializes UniversityMailingApp.
+     * Initializes universitymailing.
      * <p>
      * Spring profiles can be configured with a program arguments --spring.profiles.active=your-active-profile
      * <p>

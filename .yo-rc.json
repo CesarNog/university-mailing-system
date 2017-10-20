@@ -18,7 +18,7 @@
     "prodDatabaseType": "mysql",
     "searchEngine": false,
     "messageBroker": false,
-    "serviceDiscoveryType": "eureka",
+    "serviceDiscoveryType": false,
     "buildTool": "maven",
     "enableSocialSignIn": false,
     "enableSwaggerCodegen": false,
@@ -34,6 +34,7 @@
     "nativeLanguage": "en",
     "languages": [
       "en"
-    ]
+    ],
+    "herokuAppName": "universitymailing"
   }
 }

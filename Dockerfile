@@ -4,6 +4,8 @@ ENV JHIPSTER_SLEEP 0
 
 # add source
 ADD . /code/
+
+RUN chmod +x ./mvnw
 # package the application and delete all lib
 RUN echo '{ "allow_root": true }' > /root/.bowerrc && \
     cd /code/ && \

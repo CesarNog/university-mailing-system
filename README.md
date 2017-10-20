@@ -30,7 +30,7 @@ Yarn is also used to manage CSS and JavaScript dependencies used in this applica
 
 To optimize the universitymailing application for production, run:
 
-    **./mvnw -Pprod clean package**
+    ./mvnw -Pprod clean package
 
 This will concatenate and minify the client CSS and JavaScript files. It will also modify `index.html` so it references these new files.
 To ensure everything worked, run:

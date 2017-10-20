@@ -1,6 +1,6 @@
 package com.university.mailing.web.rest;
 
-import com.university.mailing.UniversitymailingApp;
+import com.university.mailing.UniversityMailingApp;
 import com.university.mailing.config.audit.AuditEventConverter;
 import com.university.mailing.domain.PersistentAuditEvent;
 import com.university.mailing.repository.PersistenceAuditEventRepository;
@@ -33,7 +33,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see AuditResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = UniversitymailingApp.class)
+@SpringBootTest(classes = UniversityMailingApp.class)
 @Transactional
 public class AuditResourceIntTest {
 

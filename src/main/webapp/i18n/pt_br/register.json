@@ -1,0 +1,24 @@
+{
+    "register": {
+        "title": "Registro de nova conta",
+        "form": {
+            "button": "Registrar"
+        },
+        "messages": {
+            "validate": {
+                "login": {
+                    "required": "Preencha seu nome de usuário!",
+                    "minlength": "Your username is required to be at least 1 character.",
+                    "maxlength": "Your username cannot be longer than 50 characters.",
+                    "pattern": "Your username can only contain lower-case letters and digits."
+                }
+            },
+            "success": "<strong>Registro de nova conta salva!</strong> Por favor cheque seu e-mail para confirmação.",
+            "error": {
+                "fail": "<strong>Registro falhou!</strong> Por favor tente novamente mais tarde.",
+                "userexists": "<strong>Já existe outro usuário com mesmo login!</strong> Por favor use outro.",
+                "emailexists": "<strong>Email está atualmente em uso!</strong> Por favor use outro."
+            }
+        }
+    }
+}

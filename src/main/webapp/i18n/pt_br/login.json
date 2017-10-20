@@ -1,0 +1,19 @@
+{
+    "login": {
+        "title": "Fazer Login",
+        "form": {
+            "password": "Senha",
+            "password.placeholder": "Sua senha",
+            "rememberme": "Lembrar de mim",
+            "button": "Fazer Login"
+        },
+        "messages": {
+            "error": {
+                "authentication": "<strong>Falha ao logar!</strong> Por favor cheque suas credenciais e tente novamente."
+            }
+        },
+        "password" : {
+            "forgot": "Você esqueceu sua senha?"
+        }
+    }
+}

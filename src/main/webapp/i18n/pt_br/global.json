@@ -1,0 +1,133 @@
+{
+    "global": {
+        "title": "Sistema de E-mail Universitàrio",
+        "browsehappy": "Você está usando um <strong>antigo</strong> navegador web. Por favor <a href=\"http://browsehappy.com/?locale=pt_br\">atualize seu browser</a> para aprimorar sua experi�ncia com este sistema online.",
+        "menu": {
+            "home": "Home",
+            "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+            "entities": {
+                "main": "Entidades",
+                "student": "Aluno",
+                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+            },
+            "account": {
+                "main": "Conta",
+                "settings": "Configurações",
+                "password": "Senha",
+                "sessions": "Sessões",
+                "login": "Fazer Login",
+                "logout": "Sair",
+                "register": "Registrar"
+            },
+            "admin": {
+                "main": "Administração",
+                "userManagement": "Gerenciamento de Usuários",
+                "tracker": "User tracker",
+                "metrics": "Métricas",
+                "health": "Saúde do Sistema",
+                "configuration": "Configuração",
+                "logs": "Logs",
+                "audits": "Audições",
+                "apidocs": "API",
+                "database": "Banco de Dados",
+                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+            },
+            "language": "Linguagem"
+        },
+        "form": {
+            "username": "Usuário",
+            "username.placeholder": "Seu usu�rio",
+            "newpassword": "Nova senha",
+            "newpassword.placeholder": "New password",
+            "confirmpassword": "New password confirmation",
+            "confirmpassword.placeholder": "Confirm the new password",
+            "email": "Email",
+            "email.placeholder": "Seu email"
+        },
+        "messages": {
+            "info": {
+                "authenticated": {
+                    "prefix": "Se você quer fazer ",
+                    "link": "login",
+                    "suffix": ", você deve tentar com as seguintes contas padr�o:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\")."
+                },
+                "register": {
+                    "noaccount": "Você não tem uma conta ainda?",
+                    "link": "Registrar uma nova conta"
+                }
+            },
+            "error": {
+                "dontmatch": "A senha e sua confirmação de senha não se coincidem!"
+            },
+            "validate": {
+                "newpassword": {
+                    "required": "Sua senha é requerida.",
+                    "minlength": "Your password is required to be at least 4 characters.",
+                    "maxlength": "Your password cannot be longer than 50 characters.",
+                    "strength": "Password strength:"
+                },
+                "confirmpassword": {
+                    "required": "Your confirmation password is required.",
+                    "minlength": "Your confirmation password is required to be at least 4 characters.",
+                    "maxlength": "Your confirmation password cannot be longer than 50 characters."
+                },
+                "email": {
+                    "required": "Seu e-mail é requerido.",
+                    "invalid": "Seu e-mail é invalido.",
+                    "minlength": "Your email is required to be at least 5 characters.",
+                    "maxlength": "Your email cannot be longer than 50 characters."
+                }
+            }
+        },
+        "field": {
+            "id": "ID"
+        },
+        "ribbon": {
+            "dev":"Desenvolvimento"
+        },
+        "item-count": "Mostrando {{first}} - {{second}} de {{total}} items."
+    },
+    "entity": {
+        "action": {
+            "addblob": "Adicionar blob",
+            "addimage": "Adicionar imagem",
+            "back": "Voltar",
+            "cancel": "Cancelar",
+            "delete": "Deletar",
+            "edit": "Editar",
+            "open": "Abrir",
+            "save": "Salvar",
+            "view": "Visualizar"
+        },
+        "detail": {
+            "field": "Campo",
+            "value": "Valor"
+        },
+        "delete": {
+            "title": "Confirmar operação de deleção"
+        },
+        "validation": {
+            "required": "Este campo é requerido.",
+            "minlength": "Este campo precisa ter ao menos {{ min }} caracteres.",
+            "maxlength": "Este campo não pode conter valor maior que {{ max }} caracteres.",
+            "min": "Este campo precisa ter ao menos {{ min }} caracteres.",
+            "max": "This field cannot be more than {{ max }}.",
+            "minbytes": "This field should be at least {{ min }} bytes.",
+            "maxbytes": "This field cannot be more than {{ max }} bytes.",
+            "pattern": "This field should follow pattern for {{ pattern }}.",
+            "number": "Este campo precisa ser um número.",
+            "datetimelocal": "Este campo deve ter uma data e horário."
+        }
+    },
+    "error": {
+        "internalServerError": "Erro interno do servidor",
+        "server.not.reachable": "Servido não alcançavel",
+        "url.not.found": "Não encontrado",
+        "NotNull": "Campo {{ fieldName }} não pode ser vazio!",
+        "Size": "Campo {{ fieldName }} não  not meet min/max size requirements!",
+        "userexists": "Nome de usuário já usado!",
+        "emailexists": "Este e-mail já está em uso!",
+        "idexists": "Uma nova {{ entityName }} cannot already have an ID"
+    },
+    "footer": "Este é o fim da página"
+}

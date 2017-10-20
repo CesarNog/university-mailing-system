@@ -1,0 +1,70 @@
+<div>
+    <h2>
+        <span jhiTranslate="universitymailingApp.student.home.title">Students</span>
+        <button class="btn btn-primary float-right jh-create-entity create-student" [routerLink]="['/', { outlets: { popup: ['student-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="universitymailingApp.student.home.createLabel">
+            Create new Student
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="students">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="document"><span jhiTranslate="universitymailingApp.student.document">Document</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="name"><span jhiTranslate="universitymailingApp.student.name">Name</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="address"><span jhiTranslate="universitymailingApp.student.address">Address</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="zipCode"><span jhiTranslate="universitymailingApp.student.zipCode">Zip Code</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let student of students ;trackBy: trackId">
+                <td><a [routerLink]="['../student', student.id ]">{{student.id}}</a></td>
+                <td>{{student.document}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.address}}</td>
+                <td>{{student.zipCode}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../student', student.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'student/'+ student.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'student/'+ student.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+        <div *ngIf="students && students.length">
+            <div class="row justify-content-center">
+                <jhi-item-count [page]="page" [total]="queryCount" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+            </div>
+            <div class="row justify-content-center">
+                <ngb-pagination [collectionSize]="totalItems" [pageSize]="itemsPerPage" [(page)]="page" (pageChange)="loadPage(page)"></ngb-pagination>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,27 @@
+{
+    "audits": {
+        "title": "Audits",
+        "filter": {
+            "title": "Filtrar por data",
+            "from": "from",
+            "to": "to",
+            "button": {
+                "weeks": "Semanas",
+                "today": "Hoje",
+                "clear": "Limpar",
+                "close": "Fechar"
+            }
+        },
+        "table": {
+            "header": {
+                "principal": "Usuário",
+                "date": "Data",
+                "status": "Estado",
+                "data": "Dados Extra"
+            },
+            "data": {
+                "remoteAddress": "Endereço Remoto:"
+            }
+        }
+    }
+}

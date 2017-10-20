@@ -13,7 +13,7 @@
     <artifactId>universitymailing</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>Universitymailing</name>
+    <name>UniversityMailingSystem</name>
 
     <properties>
         <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx256m</argLine>

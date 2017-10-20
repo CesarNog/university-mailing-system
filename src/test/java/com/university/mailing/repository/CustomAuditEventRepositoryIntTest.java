@@ -1,6 +1,6 @@
 package com.university.mailing.repository;
 
-import com.university.mailing.UniversitymailingApp;
+import com.university.mailing.UniversityMailingApp;
 import com.university.mailing.config.Constants;
 import com.university.mailing.config.audit.AuditEventConverter;
 import com.university.mailing.domain.PersistentAuditEvent;
@@ -32,7 +32,7 @@ import static com.university.mailing.repository.CustomAuditEventRepository.EVENT
  * @see CustomAuditEventRepository
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = UniversitymailingApp.class)
+@SpringBootTest(classes = UniversityMailingApp.class)
 @Transactional
 public class CustomAuditEventRepositoryIntTest {
 

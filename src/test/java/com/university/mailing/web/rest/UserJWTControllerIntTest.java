@@ -1,6 +1,6 @@
 package com.university.mailing.web.rest;
 
-import com.university.mailing.UniversitymailingApp;
+import com.university.mailing.UniversityMailingApp;
 import com.university.mailing.domain.User;
 import com.university.mailing.repository.UserRepository;
 import com.university.mailing.security.jwt.TokenProvider;
@@ -27,7 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see UserJWTController
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = UniversitymailingApp.class)
+@SpringBootTest(classes = UniversityMailingApp.class)
 public class UserJWTControllerIntTest {
 
     @Autowired

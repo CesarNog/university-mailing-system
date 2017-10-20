@@ -1,0 +1,83 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myStudentLabel" jhiTranslate="universitymailingApp.student.home.createOrEditLabel">Create or edit a Student</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!student.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="student.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="universitymailingApp.student.document" for="field_document">Document</label>
+            <input type="text" class="form-control" name="document" id="field_document"
+                [(ngModel)]="student.document" required minlength="14" maxlength="14" pattern="(^\d{3}\x2E\d{3}\x2E\d{3}\x2D\d{2}$)" />
+            <div [hidden]="!(editForm.controls.document?.dirty && editForm.controls.document?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.document?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.document?.errors?.minlength" jhiTranslate="entity.validation.minlength" translateValues="{ min: 14 }">
+                   This field is required to be at least 14 characters.
+                </small>
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.document?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 14 }">
+                   This field cannot be longer than 14 characters.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.document?.errors?.pattern" jhiTranslate="entity.validation.pattern" translateValues="{ pattern: 'Document' }">
+                    This field should follow pattern for "Document".
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="universitymailingApp.student.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                [(ngModel)]="student.name"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="universitymailingApp.student.address" for="field_address">Address</label>
+            <input type="text" class="form-control" name="address" id="field_address"
+                [(ngModel)]="student.address" maxlength="30" />
+            <div [hidden]="!(editForm.controls.address?.dirty && editForm.controls.address?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.address?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 30 }">
+                   This field cannot be longer than 30 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="universitymailingApp.student.zipCode" for="field_zipCode">Zip Code</label>
+            <input type="text" class="form-control" name="zipCode" id="field_zipCode"
+                [(ngModel)]="student.zipCode" minlength="8" maxlength="9" pattern="\d{5}-\d{3}" />
+            <div [hidden]="!(editForm.controls.zipCode?.dirty && editForm.controls.zipCode?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.zipCode?.errors?.minlength" jhiTranslate="entity.validation.minlength" translateValues="{ min: 8 }">
+                   This field is required to be at least 8 characters.
+                </small>
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.zipCode?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 9 }">
+                   This field cannot be longer than 9 characters.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.zipCode?.errors?.pattern" jhiTranslate="entity.validation.pattern" translateValues="{ pattern: 'Zip Code' }">
+                    This field should follow pattern for "Zip Code".
+                </small>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

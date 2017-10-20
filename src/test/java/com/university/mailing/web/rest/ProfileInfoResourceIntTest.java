@@ -1,7 +1,7 @@
 package com.university.mailing.web.rest;
 
 import io.github.jhipster.config.JHipsterProperties;
-import com.university.mailing.UniversitymailingApp;
+import com.university.mailing.UniversityMailingApp;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see ProfileInfoResource
  **/
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = UniversitymailingApp.class)
+@SpringBootTest(classes = UniversityMailingApp.class)
 public class ProfileInfoResourceIntTest {
 
     @Mock

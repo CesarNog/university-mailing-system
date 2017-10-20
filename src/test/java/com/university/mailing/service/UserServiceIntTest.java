@@ -1,6 +1,6 @@
 package com.university.mailing.service;
 
-import com.university.mailing.UniversitymailingApp;
+import com.university.mailing.UniversityMailingApp;
 import com.university.mailing.config.Constants;
 import com.university.mailing.domain.User;
 import com.university.mailing.repository.UserRepository;
@@ -31,7 +31,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @see UserService
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = UniversitymailingApp.class)
+@SpringBootTest(classes = UniversityMailingApp.class)
 @Transactional
 public class UserServiceIntTest {
 

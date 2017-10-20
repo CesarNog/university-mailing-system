@@ -1,7 +1,7 @@
 package com.university.mailing.service;
 import com.university.mailing.config.Constants;
 
-import com.university.mailing.UniversitymailingApp;
+import com.university.mailing.UniversityMailingApp;
 import com.university.mailing.domain.User;
 import io.github.jhipster.config.JHipsterProperties;
 import org.junit.Before;
@@ -30,7 +30,7 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = UniversitymailingApp.class)
+@SpringBootTest(classes = UniversityMailingApp.class)
 public class MailServiceIntTest {
 
     @Autowired

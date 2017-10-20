@@ -1,6 +1,6 @@
 package com.university.mailing.web.rest;
 
-import com.university.mailing.UniversitymailingApp;
+import com.university.mailing.UniversityMailingApp;
 import com.university.mailing.domain.Authority;
 import com.university.mailing.domain.User;
 import com.university.mailing.repository.UserRepository;
@@ -47,7 +47,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see UserResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = UniversitymailingApp.class)
+@SpringBootTest(classes = UniversityMailingApp.class)
 public class UserResourceIntTest {
 
     private static final Long DEFAULT_ID = 1L;

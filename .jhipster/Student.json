@@ -1,0 +1,50 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "document",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMinlength": "14",
+            "fieldValidateRulesMaxlength": "14",
+            "fieldValidateRulesPattern": "(^\\d{3}\\x2E\\d{3}\\x2E\\d{3}\\x2D\\d{2}$)"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "30"
+        },
+        {
+            "fieldName": "zipCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "minlength",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMinlength": "8",
+            "fieldValidateRulesMaxlength": "9",
+            "fieldValidateRulesPattern": "\\d{5}-\\d{3}"
+        }
+    ],
+    "changelogDate": "20171020025854",
+    "dto": "mapstruct",
+    "service": "no",
+    "entityTableName": "student",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

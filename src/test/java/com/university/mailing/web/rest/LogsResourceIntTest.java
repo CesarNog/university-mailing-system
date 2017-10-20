@@ -1,6 +1,6 @@
 package com.university.mailing.web.rest;
 
-import com.university.mailing.UniversitymailingApp;
+import com.university.mailing.UniversityMailingApp;
 import com.university.mailing.web.rest.vm.LoggerVM;
 import ch.qos.logback.classic.AsyncAppender;
 import ch.qos.logback.classic.LoggerContext;
@@ -27,7 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see LogsResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = UniversitymailingApp.class)
+@SpringBootTest(classes = UniversityMailingApp.class)
 public class LogsResourceIntTest {
 
     private MockMvc restLogsMockMvc;

@@ -1,0 +1,24 @@
+{
+    "universitymailingApp": {
+        "student" : {
+            "home": {
+                "title": "Alunos",
+                "createLabel": "Criar um novo Aluno",
+                "createOrEditLabel": "Criar ou editar um Aluno"
+            },
+            "created": "Um novo Aluno foi criado com o identificador {{ param }}",
+            "updated": "Aluno atualizado com identificador {{ param }}",
+            "deleted": "O Aluno {{ param }} foi deletado ",
+            "delete": {
+                "question": "Você tem certeza que quer deletar o aluno de identificação {{ id }}?"
+            },
+            "detail": {
+                "title": "Aluno"
+            },
+            "document": "Documento",
+            "name": "Nome",
+            "address": "Endereço",
+            "zipCode": "CEP"
+        }
+    }
+}

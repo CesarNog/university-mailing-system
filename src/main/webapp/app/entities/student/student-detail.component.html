@@ -1,0 +1,37 @@
+
+<div *ngIf="student">
+    <h2><span jhiTranslate="universitymailingApp.student.detail.title">Student</span> {{student.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="universitymailingApp.student.document">Document</span></dt>
+        <dd>
+            <span>{{student.document}}</span>
+        </dd>
+        <dt><span jhiTranslate="universitymailingApp.student.name">Name</span></dt>
+        <dd>
+            <span>{{student.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="universitymailingApp.student.address">Address</span></dt>
+        <dd>
+            <span>{{student.address}}</span>
+        </dd>
+        <dt><span jhiTranslate="universitymailingApp.student.zipCode">Zip Code</span></dt>
+        <dd>
+            <span>{{student.zipCode}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'student/'+ student.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

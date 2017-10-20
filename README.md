@@ -1,4 +1,6 @@
-# University Mailing System
+# University Mailing System developed by Cesar Augusto Nogueira (@cesarnogcps)
+
+[![Build Status](https://travis-ci.org/CesarNog/university-mailing-system.svg?branch=master)](https://travis-ci.org/CesarNog/university-mailing-system)
 
 ## Development
 

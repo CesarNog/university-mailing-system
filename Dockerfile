@@ -5,14 +5,10 @@ ENV JHIPSTER_SLEEP 0
 # add source
 ADD . /code/
 
-RUN chmod +x mvnw
 # package the application and delete all lib
-RUN echo '{ "allow_root": true }' > /root/.bowerrc && \
-    cd /code/ && \
-    ./mvnw clean package -Pprod -DskipTests && \
-    mv /code/target/*.war /app.war && \
-    rm -Rf /code /root/.npm/ /tmp && \
-    rm -Rf /root/.m2/
+RUN echo '{ "allow_root": true }' > /root/.bowerrc 
+
+RUN sh -c  'cd /code/ && ./mvnw clean package -Pprod -DskipTests && mv /code/target/*.war /app.war && rm -Rf /code /root/.npm/ /tmp && rm -Rf /root/.m2/'
 
 RUN sh -c 'touch /app.war'
 VOLUME /tmp
